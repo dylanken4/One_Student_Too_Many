@@ -1,0 +1,26 @@
+Hypothesis:
+    I believe that the loop is going too far because the loop ends at
+    names.length rather forcing the loop to go 1 too far
+
+Minimal repair:
+    set loop to end at name.length - 1
+
+Explination:
+    names[names.length] = names[3]
+    Because arrays start at a 0 index the code above throws an error due to
+    the ending variable is "Cy" at names[2]
+    
+Regression:
+    names = ["Ari", "Bo", "Cy"]
+        Console:
+            ARI
+            BO
+            CY
+    
+    names = ["Chet"]
+        Console:
+            CHET
+
+    names = []
+        Console:
+                

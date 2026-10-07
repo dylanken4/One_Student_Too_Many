@@ -1,0 +1,31 @@
+BUGGED
+    set name to array ["Ari", "Bo", "Cy"]
+
+    enter for loop where i starts at 0 and ends at names.length
+        i = 0
+        logs "ARI" in console
+
+        i = 1
+        logs "BO" in console
+
+        i = 2 
+        logs "CY" in console
+
+        i = 3
+        TypeError
+            names[3] does not exist in memory 
+CORRECTED
+    set name to array ["Ari", "Bo", "Cy"]
+
+    enter for loop where i starts at 0 and ends at (names.length - 1)
+        i = 0
+        logs "ARI" in console
+
+        i = 1
+        logs "BO" in console
+
+        i = 2 
+        logs "CY" in console
+        
+        loop closes
+
